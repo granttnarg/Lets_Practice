@@ -1,0 +1,8 @@
+<h1>LET'S PRACTICE</h1>
+
+<ul>
+  <% @songs.each do |song| %>
+  <li><%= song.artist%> //  <%= link_to song.name, song_path(song) %> // <%= song.date_uploaded%> </li>
+  <% end %>
+
+</ul>

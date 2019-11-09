@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+
+  root to: 'pages#home'
+
   resources :songs do
-    resources :notes, only: [:new, :create]
+    resources :notes, only: [:new, :create, :index, :show]
   end
 end
 

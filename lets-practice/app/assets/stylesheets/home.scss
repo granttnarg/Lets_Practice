@@ -1,0 +1,75 @@
+.col {
+  background-image: url("paper.gif");
+  border-left : 2px solid white;
+  height: 400px;
+  transform: skewX(-10deg);
+}
+
+.end {
+  border-right : 2px solid white;
+}
+// .col:hover {
+//   background-color: white;
+//   opacity: 0.1;
+// }
+
+.row {
+  border: 2px solid white;
+  background-image: url("https://res.cloudinary.com/dpxibu6l4/image/upload/v1573315212/marius-masalar-rPOmLGwai2w-unsplash_okvphx.jpg");
+  background-position: center;
+  background-size: cover;
+
+}
+.col p {
+  // transform: skewX(8deg);
+}
+
+.body {
+  background-color: white !important;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+.each {
+  border-top: solid;
+  height: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+.each #hover-image {
+  height: 100px;
+  visibility:hidden;
+
+
+}
+.each:hover  {
+  height: 100px;
+  opacity: 1;
+  transition: 1s;
+}
+
+.each:hover #hover-image{
+    visibility:visible;
+    transition: 1s;
+}
+
+#played-on {
+  visibility:hidden;
+  font-family: 'Allura', cursive;
+}
+.each:hover #played-on{
+    visibility:visible;
+    transition: 1s;
+}
+
+.each:hover {
+  border-top: solid;
+  height: 250px;
+}
+
