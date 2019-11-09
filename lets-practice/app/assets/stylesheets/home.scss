@@ -1,5 +1,5 @@
 .col {
-  background-image: url("paper.gif");
+  // background-image: url("paper.gif");
   border-left : 2px solid white;
   height: 400px;
   transform: skewX(-10deg);
@@ -13,7 +13,7 @@
 //   opacity: 0.1;
 // }
 
-.row > .main-page {
+.main-page {
   border: 2px solid white;
   background-image: url("https://res.cloudinary.com/dpxibu6l4/image/upload/e_brightness:-36/v1573315212/marius-masalar-rPOmLGwai2w-unsplash_okvphx.jpg");
   background-position: center;

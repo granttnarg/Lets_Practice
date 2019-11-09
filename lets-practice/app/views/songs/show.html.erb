@@ -1,16 +1,35 @@
-<h3><%= @song.artist %></h3>
-<h3><%= @song.name %></h3>
-<h3><%= @song.native_bpm %></h3>
-<h3><%= @song.info %></h3>
-<%= cl_image_tag @song.photo, height: 200, width: 200, crop: :fill %>
-<h3>Sheet Music ...</h3>
-<!-- <h3><%=@song.pictures  %></h3> -->
-<ul>
-  <% @song.pictures %>
-  <% raise %>
-  <%= @song.pictures.each do |picture| %>
 
-    <!-- `picture` here is an instance of the Picture model -->
-    <li><%=  cl_image_tag(picture.photo, width: 400, height: 300, crop: :fill) %></li>
-  <% end %>
-</ul>
+  <div class="row show-page">
+
+    <div class="col-1"></div>
+    <div class="col-2 show-col-left">
+      <%= cl_image_tag @song.photo, height: 120, crop: :fill %>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h4><%= @song.artist %></h4>
+      <h5><%= @song.name %></h5>
+      <h5><%= @song.native_bpm %> BPM</h5>
+      <h6><%= @song.key%></h6>
+      <h3>______</h3>
+      <p><%= @song.info %></p>
+      <h3>______</h3>
+      <h5><%= @song.chords %></h5>
+    </div>
+
+    <div class="col-6 show-col-center">
+      <%= cl_image_tag @song.sheet_music, height: 900, crop: :fill %>
+    </div>
+
+    <div class=" col-2 show-col show-col-right">
+      <br>
+
+      <h4>___Notes</h4>
+    </div>
+
+    <div class="col-1"></div>
+
+
+  </div>
+

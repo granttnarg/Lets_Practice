@@ -24,15 +24,15 @@ class SongsController < ApplicationController
 private
 
   def song_params
-    params.require(:song).permit(:artist, :name, :native_bpm, :info, :photo)
+    params.require(:song).permit(:artist, :name, :native_bpm, :info, :photo, :sheet_music, :key, :chords)
   end
 
-  def create_sheet_music
-  sheets = params.dig(:song, :pictures) || []
-    sheets.each do |sheet|
-      @song.pictures.create(photo: sheet)
-    end
-  end
+  # def create_sheet_music
+  # sheets = params.dig(:song, :pictures) || []
+  #   sheets.each do |sheet|
+  #     @song.pictures.create(photo: sheet)
+  #   end
+  # end
 
 
 end
