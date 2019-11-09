@@ -1,5 +1,16 @@
-<h1>Let's Practice</h1>
+<h3><%= @song.artist %></h3>
+<h3><%= @song.name %></h3>
+<h3><%= @song.native_bpm %></h3>
+<h3><%= @song.info %></h3>
+<%= cl_image_tag @song.photo, height: 200, width: 200, crop: :fill %>
+<h3>Sheet Music ...</h3>
+<!-- <h3><%=@song.pictures  %></h3> -->
+<ul>
+  <% @song.pictures %>
+  <% raise %>
+  <%= @song.pictures.each do |picture| %>
 
-<h2><%= @song.artist %> - <%= @song.name %> </h2>
-
-
+    <!-- `picture` here is an instance of the Picture model -->
+    <li><%=  cl_image_tag(picture.photo, width: 400, height: 300, crop: :fill) %></li>
+  <% end %>
+</ul>

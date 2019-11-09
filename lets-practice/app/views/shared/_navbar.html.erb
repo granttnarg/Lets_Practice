@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="nav-link">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to songs_path, class: "navbar-brand" do %>
       <h2 class="rotate">Browse</h2>
     <% end %>
   </div>
@@ -8,8 +8,11 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <h1 id="nav-main-header">Let's Practice</h1>
+  <div>
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <h1 id="nav-main-header">Let's Practice</h1>
+    <% end %>
+  </div>
 
 
 
@@ -18,7 +21,7 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <div class="nav-link">
-          <%= link_to "#", class: "nav-link" do %>
+          <%= link_to new_song_path, class: "nav-link" do %>
             <h2>Upload</h2>
           <% end %>
         </div>
@@ -26,3 +29,4 @@
     </ul>
   </div>
 </div>
+

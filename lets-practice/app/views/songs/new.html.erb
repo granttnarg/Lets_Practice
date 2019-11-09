@@ -1,10 +1,22 @@
+<div class="container">
+  <%= simple_form_for @song do |f| %>
+    <div class="row new-form" style="padding-top: 50px;">
+      <div class="col-xs-12 col-lg-12">
 
-<%= simple_form_for @song do |f| %>
-<%= f.input :artist %>
-<%= f.input :name %>
-<%= f.input :native_bpm %>
-<%= f.input :date_uploaded %>
-<%= f.input :info %>
-<%= f.input :photo %>
-<%= f.input :photo_cache, as: :hidden %>
-<% end %>
+      <%= f.input :artist, label: "Artist Name"%>
+      <%= f.input :name, label: "Song Name"  %>
+      <%= f.input :native_bpm, label: "Native BPM" %>
+      <%= f.input :info, label: "Description" %>
+      </div>
+
+      <div class="col-xs-12 col-lg-8">
+
+      <%= f.input :photo, label: "Album Art" %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.input :pictures, as: :file, label: "Sheet Music", input_html: { multiple: true } %>
+      <%= f.submit %>
+      </div>
+
+    </div>
+  <% end %>
+</div>
