@@ -1,12 +1,12 @@
 .col {
   // background-image: url("paper.gif");
-  border-left : 2px solid white;
+  border-left : 3px solid white;
   height: 400px;
   transform: skewX(-10deg);
 }
 
 .end {
-  border-right : 2px solid white;
+  border-right : 3px solid white;
 }
 // .col:hover {
 //   background-color: white;
@@ -14,7 +14,7 @@
 // }
 
 .main-page {
-  border: 2px solid white;
+  border: 3px solid white;
   background-image: url("https://res.cloudinary.com/dpxibu6l4/image/upload/e_brightness:-36/v1573315212/marius-masalar-rPOmLGwai2w-unsplash_okvphx.jpg");
   background-position: center;
   background-size: cover;
@@ -70,4 +70,7 @@
     transition: 1s;
 }
 
+.home-text {
+  color: white;
+}
 
