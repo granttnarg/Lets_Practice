@@ -1,8 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  padding-bottom: 10px;
+  padding-bottom: 25px;
   position: relative;
+  background-image: url("https://res.cloudinary.com/dpxibu6l4/image/upload/v1573392746/geert-pieters-8QrPJ3Kfie4-unsplash_yk1k1d.jpg");
+  background-size: cover;
+  background-position: unset;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,8 +18,8 @@
 }
 
 #nav-main-header {
-  border-bottom: 2px solid black;
-  color: black;
+  border-bottom: 2px solid white;
+  color: white;
   font-size: 50px;
 }
 
@@ -47,8 +50,23 @@ text-decoration: underline;
   left: -10px;
 }
 
+.browse-black {
+  color: black;
+  position: absolute;
+  top: 25px;
+  left: 12px;
+
+}
+
+.browse-white {
+  color: white;
+}
+
+
+
 .upload {
   position: absolute;
+  color: white;
   top: 20px;
   left: 1140px;
 }
@@ -56,10 +74,11 @@ text-decoration: underline;
 .metronome {
   position: absolute;
   left: 970px;
-  top: 14px;
-  border: solid 2px black;
+  top: 24px;
+  border: solid 2px white;
   border-radius: 5px;
   padding: 5px;
+  color: white;
 }
 
 
