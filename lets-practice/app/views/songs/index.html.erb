@@ -10,7 +10,8 @@
 
         <div class="card-product-infos">
           <h2><%= song.artist%></h2>
-          <p><%= song.name%> // <%= song.native_bpm%> BPM // <%= song.key %> </p>
+          <h3><%= song.name%></h3>
+          <h3 id="bpm-key-card"><%= song.native_bpm%> BPM  /  <%= song.key %> </h3>
         </div>
       </div>
     <% end %>

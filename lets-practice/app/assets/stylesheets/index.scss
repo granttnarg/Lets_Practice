@@ -7,13 +7,15 @@ padding: 5px;
 
 .card-product {
   overflow: hidden;
-  background-color: #24313D;
+  background-color: #10191e;
   height: 60px;
   display: flex;
   align-items: center;
   color: white;
   margin-top: 4px;
   padding: 5px;
+  transition: 1s;
+  transform: skewX(-10deg);
 }
 
 .card-product:hover {
@@ -24,6 +26,7 @@ padding: 5px;
   height: 100%;
   width: 120px;
   object-fit: cover;
+
 }
 
 .card-product h2 {
@@ -41,6 +44,27 @@ padding: 5px;
 }
 
 .card-product .card-product-infos {
+  display: flex;
+  align-items: center;
   padding: 16px;
 }
 
+.card-product-infos h2 {
+  position: relative;
+  height: 25px;
+}
+
+.card-product-infos h3 {
+  height: 25px;
+  color: white;
+  font-size: 16px;
+  padding-left: 30px;
+
+}
+
+
+.card-product-infos #bpm-key-card {
+  position: absolute;
+  right: 100px;
+
+}
