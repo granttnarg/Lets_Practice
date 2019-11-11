@@ -18,7 +18,35 @@
     <div id="root"></div>
     <%= yield %>
 
+    <script>
+    function revealComments() {
+      comments = document.querySelectorAll("#hidden")
+      comments.forEach((comment) => {
+        if (comment.classList.contains("hidden")) {
+          return comment.classList.remove("hidden");
+        } else {
+          return comment.classList.add("hidden")
+        }
 
+      })
+    }
+
+
+    function openNav() {
+      if (document.getElementById("mySidenav").style.width === "965px"){
+        revealComments();
+        return document.getElementById("mySidenav").style.width = "150px";
+      } else {
+        revealComments();
+        return document.getElementById("mySidenav").style.width = "965px"
+      }
+    };
+
+
+    // function closeNav() {
+    //   document.getElementById("mySidenav").style.width = "0";
+    // }
+    </script>
 
   </body>
 </html>
