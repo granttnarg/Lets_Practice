@@ -1,6 +1,5 @@
-
+  <%= render 'shared/side_nav' %>
   <div class="row show-page">
-
     <div class="col-1"></div>
     <div class="col-2 show-col-left">
       <%= cl_image_tag @song.photo, height: 120, crop: :fill %>
@@ -18,14 +17,14 @@
       <h5 class="show-info-key"><%= @song.chords %></h5>
     </div>
 
-    <div class="col-7 show-col-center">
-      <%= cl_image_tag @song.sheet_music, height: 900, crop: :fill %>
+    <div class="col-8 show-col-center">
+      <%= cl_image_tag @song.sheet_music, height: 1000, crop: :fill %>
     </div>
 
-    <div class=" col-1.5 show-col show-col-right">
+    <div class="col-1">
       <br>
 
-      <h4>Notes</h4>
+
     </div>
 
     <div class=""></div>

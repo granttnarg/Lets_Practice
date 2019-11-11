@@ -55,7 +55,7 @@ class Dashboard extends Component {
       <div className="container">
 
         <div className="song-search-input">
-        <h2 id="search-head">Search via Artist</h2>
+        <h2 id="" className="show-info-search-head">Search via Artist</h2>
           <input id="search-input" ref={ (input) => { this.searchBar = input } } value={ this.state.term } onChange={ this.getAutoCompleteResults.bind(this) } type='text' placeholder='Search...' />
           { autoCompleteList }
         </div>
