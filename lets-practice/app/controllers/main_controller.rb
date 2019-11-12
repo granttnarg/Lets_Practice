@@ -4,7 +4,11 @@ class MainController < ApplicationController
   def index; end
 
   def search
-    @songs = Song.ransack(artist_cont: params[:q]).result(distinct: true)
+      name_songs = Song.ransack(name_cont: params[:q]).result(distinct: true)
+      artist_songs = Song.ransack(artist_cont: params[:q]).result(distinct: true)
+      key_songs = Song.ransack(key_cont: params[:q]).result(distinct: true)
+
+      @songs = name_songs.or(artist_songs).or(key_songs)
   end
 
   private
@@ -13,3 +17,5 @@ class MainController < ApplicationController
     request.format = :json
   end
 end
+
+
