@@ -22,7 +22,6 @@ class Dashboard extends Component {
   }
 
   getAutoCompleteResults(e){
-    e.preventDefault();
     this.setState({
       term: e.target.value
     }, () => {
