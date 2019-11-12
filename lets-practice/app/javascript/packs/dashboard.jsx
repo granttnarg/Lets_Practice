@@ -33,14 +33,14 @@ class Dashboard extends Component {
 
   render(){
     let autoCompleteList = this.state.autoCompleteResults.map((response, index) => {
-      return <div key={index} class="row show-page">
-              <div id="search-results" class="container">
+      return <div key={index} className="row show-page">
+              <div id="search-results" className="container">
               <a href={"songs/" + response.id}>
                 <div className="card-product index-card"key={index}>
 
                 <Image cloudName="dpxibu6l4" publicId={response.photo.url} width="300" crop="scale" />
 
-                  <div class="card-product-infos">
+                  <div className="card-product-infos">
                     <h2>{response.artist}</h2>
                     <h3>{response.name}</h3>
                     <h3 id="bpm-key-card"> {response.native_bpm} BPM  / {response.key}</h3>
@@ -55,7 +55,7 @@ class Dashboard extends Component {
       <div className="container">
 
         <div className="song-search-input">
-        <h2 id="" className="show-info-search-head">Search via Artist</h2>
+        <h2 id="" className="show-info-search-head">Search via Artist, Track, Key, Keyword or BPM</h2>
           <input id="search-input" ref={ (input) => { this.searchBar = input } } value={ this.state.term } onChange={ this.getAutoCompleteResults.bind(this) } type='text' placeholder='Search...' />
           { autoCompleteList }
         </div>
@@ -64,10 +64,12 @@ class Dashboard extends Component {
   }
 }
 
-document.addEventListener('DOMContentLoaded', (e) => {
-  e.preventDefault();
+document.addEventListener('turbolinks:load', (e) => {
   ReactDOM.render(
-    <Dashboard />,
-    document.body.appendChild(document.createElement('div')),
-  )
+    <Dashboard />, document.getElementById("results-div"))
 });
+
+
+// export default Dashboard;
+
+// document.body.appendChild(document.createElement('div')
