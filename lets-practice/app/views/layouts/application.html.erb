@@ -15,41 +15,8 @@
 
   <body>
     <%= render 'shared/navbar' %>
-    <div id="root"></div>
     <%= yield %>
-     <script>
-        // document.addEventListener("turbolinks:load", () => {
-        //   runThisMethod();
-        //   initWhatever();
-        // });
-    </script>
-
-    <script>
-      function revealComments() {
-      comments = document.querySelectorAll("#hidden")
-      comments.forEach((comment) => {
-        if (comment.classList.contains("hidden")) {
-          return comment.classList.remove("hidden");
-        } else {
-          return comment.classList.add("hidden")
-        }
-
-      })
-    };
-    </script>
-
-    <script>
-      function openNav() {
-      if (document.getElementById("mySidenav").style.width === "965px"){
-        revealComments();
-          return document.getElementById("mySidenav").style.width = "150px";
-        } else {
-        revealComments();
-          return document.getElementById("mySidenav").style.width = "965px"
-        }
-      };
-    </script>
-
-   <%= javascript_pack_tag 'application' %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_pack_tag "application" %>
   </body>
 </html>
