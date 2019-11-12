@@ -1,12 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
   position: relative;
-  background-image: url("https://res.cloudinary.com/dpxibu6l4/image/upload/v1573392746/geert-pieters-8QrPJ3Kfie4-unsplash_yk1k1d.jpg");
-  background-size: cover;
-  background-position: unset;
-  z-index: 20;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -19,20 +15,9 @@
 }
 
 #nav-main-header {
-  border-bottom: 2px solid white;
-  color: white;
+  border-bottom: 2px solid black;
+  color: black;
   font-size: 50px;
-}
-
-.bounce-top {
-  -webkit-animation: bounce-top 0.9s both;
-          animation: bounce-top 0.9s both;
-
-}
-
-.metronome:hover {
-  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-          animation: heartbeat 1.5s ease-in-out infinite both;
 }
 
 .nav-link {
@@ -43,10 +28,9 @@ line-height: 3px;
 }
 
 .nav-link h2:hover {
-font-size: 2rem;
+color: black;
 text-decoration: underline;
 }
-
 
 .rotate {
   transform: rotate(-90deg);
@@ -63,23 +47,8 @@ text-decoration: underline;
   left: -10px;
 }
 
-.browse-black {
-  color: black;
-  position: absolute;
-  top: 25px;
-  left: 12px;
-
-}
-
-.browse-white {
-  color: white;
-}
-
-
-
 .upload {
   position: absolute;
-  color: white;
   top: 20px;
   left: 1140px;
 }
@@ -87,11 +56,10 @@ text-decoration: underline;
 .metronome {
   position: absolute;
   left: 970px;
-  top: 24px;
-  border: solid 2px white;
+  top: 14px;
+  border: solid 2px black;
   border-radius: 5px;
   padding: 5px;
-  color: white;
 }
 
 
@@ -99,11 +67,6 @@ text-decoration: underline;
   background-color: black;
   color: white;
 }
-
-
-//
-
-
 
 
 

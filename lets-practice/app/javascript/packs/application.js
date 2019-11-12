@@ -16,20 +16,4 @@
 // const imagePath = (name) => images(name, true)
 
 import 'bootstrap';
-// import React from "react"
-// import revealComments from './reveal_comments';
-// import openNav from './side_bar';
 
-// import Dashboard from "dashboard";
-
-// ReactDOM.render(
-//     <Dashboard />, document.getElementById("results-div"));
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-// import './index.css';
-import Metronome from './Metronome';
-// import registerServiceWorker from './registerServiceWorker';
-
-ReactDOM.render(<Metronome/>, document.getElementById('metro'));
-// registerServiceWorker();
