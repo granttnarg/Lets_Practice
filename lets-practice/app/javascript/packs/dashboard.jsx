@@ -55,7 +55,7 @@ class Dashboard extends Component {
       <div className="container">
 
         <div className="song-search-input">
-        <h2 id="" className="show-info-search-head">Search via Artist</h2>
+        <h2 id="" className="show-info-search-head">Search via Artist, Track, Key, Keyword or BPM</h2>
           <input id="search-input" ref={ (input) => { this.searchBar = input } } value={ this.state.term } onChange={ this.getAutoCompleteResults.bind(this) } type='text' placeholder='Search...' />
           { autoCompleteList }
         </div>
@@ -64,10 +64,12 @@ class Dashboard extends Component {
   }
 }
 
-document.addEventListener('DOMContentLoaded', (e) => {
-  e.preventDefault();
+document.addEventListener('turbolinks:load', (e) => {
   ReactDOM.render(
-    <Dashboard />,
-    document.body.appendChild(document.createElement('div')),
-  )
+    <Dashboard />, document.getElementById("results-div"))
 });
+
+
+// export default Dashboard;
+
+// document.body.appendChild(document.createElement('div')
