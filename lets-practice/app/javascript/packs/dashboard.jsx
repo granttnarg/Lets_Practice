@@ -64,10 +64,10 @@ class Dashboard extends Component {
   }
 }
 
-document.addEventListener('turbolinks:load', (e) => {
+// document.addEventListener('turbolinks:load', (e) => {
   ReactDOM.render(
     <Dashboard />, document.getElementById("results-div"))
-});
+// });
 
 
 // export default Dashboard;

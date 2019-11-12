@@ -30,7 +30,7 @@
 
 }
 
-.metronome:hover {
+.metronome-old:hover {
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
           animation: heartbeat 1.5s ease-in-out infinite both;
 }
@@ -84,7 +84,7 @@ text-decoration: underline;
   left: 1140px;
 }
 
-.metronome {
+.metronome-old {
   position: absolute;
   left: 970px;
   top: 24px;
@@ -95,7 +95,7 @@ text-decoration: underline;
 }
 
 
-.metronome:hover {
+.metronome-old:hover {
   background-color: black;
   color: white;
 }
@@ -103,6 +103,38 @@ text-decoration: underline;
 
 //
 
+#metro {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  right: 130px;
+}
+
+
+.metronome {
+  text-align: center;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 30px;
+  top: -50px;
+  right: -100px;
+  position: absolute;
+}
+
+.bpm-slider input {
+  width: 100%;
+  margin: 10px;
+}
+
+.metronome button {
+  background: #22323d;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 2px;
+  width: 100px;
+  color: #fff;
+  font-size: 18px;
+}
 
 
 
