@@ -1,0 +1,34 @@
+
+var newNote = '<p id="hidden" class ="show-info-white"><%= @note.date %></p><p id="hidden" class ="show-info"><strong>Practiced at </strong><%= @note.prac_bpm %> <strong>BPM</strong></p><p id="hidden" class ="show-info-key"><%= @note.rating %> <strong>Stars</strong></p><p id="hidden" class ="show-info-key"><strong>Up to Bar</strong> <%= @note.bar_progress %></p><p id="hidden" class ="show-info-key"><strong>How did it go?</strong><br> <%= @note.description %></p><h1 id="hidden" class="show-info-main hidden">__________</h1>'
+
+var allNotes = document.getElementById('notes-side');
+
+allNotes.insertAdjacentHTML('afterbegin', newNote);
+
+var inputBox = document.getElementById('note_rating')
+inputBox.value = "";
+
+var inputBpm = document.getElementById('note_prac_bpm');
+inputBpm.value = "";
+
+var inputBar = document.getElementById('note_bar_progress');
+inputBar.value = "";
+
+var inputDes = document.getElementById('note_description');
+inputDes.value = "";
+
+
+// console.log("Bad Validations")
+// var inputBox = document.getElementById('note_rating')
+// inputBox.value = "";
+
+// var inputBpm = document.getElementById('note_prac_bpm');
+// inputBpm.value = "";
+
+// var inputBar = document.getElementById('note_bar_progress');
+// inputBar.value = "";
+// var inputDes = document.getElementById('note_description');
+// inputDes.value = "Not Valid, Please fill in all the fields";
+
+
+
