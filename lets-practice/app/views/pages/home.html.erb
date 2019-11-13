@@ -1,5 +1,4 @@
 
-<br>
 <div class="container">
 
         <div id="main_carousel" class="carousel slide" data-ride="carousel">
@@ -11,7 +10,6 @@
               <div class="row main-page">
               <% @songs[0..3].each do |song|  %>
                 <div class="col column">
-                <%= link_to song_path(song) do %>
 
                   <div class="each">
 
@@ -21,7 +19,6 @@
 
                   <p id="played-on home-text">Played on ...</p>
                  </div>
-                <% end %>
               </div>
               <% end  %>
              </div>
@@ -31,11 +28,10 @@
             <div class="carousel-item">
             <div class="main-box container">
 
-             <div class="row main-page-second">
+             <div class="row main-page">
               <% @songs[4..7].each do |song|  %>
                 <div class="col column">
 
-                 <%= link_to song_path(song) do %>
                   <div class="each">
 
                   <h5 class="home-text"><%= song.artist  %></h5>
@@ -44,7 +40,6 @@
 
                   <p id="played-on home-text">Played on ...</p>
                   </div>
-                <% end %>
                 </div>
 
               <% end  %>
