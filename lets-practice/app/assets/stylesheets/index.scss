@@ -14,7 +14,7 @@ padding: 5px;
   color: white;
   margin-top: 4px;
   padding: 5px;
-  transition: 1s;
+  transition: 0.5s;
   transform: skewX(-10deg);
 }
 
@@ -85,4 +85,15 @@ padding: 5px;
   display: block;
   width: 500px;
 
+}
+
+.song-info {
+    visibility:hidden;
+    font-size: 10px;
+    transition: 0.5s;
+}
+
+.index-card:hover .song-info {
+    visibility:visible;
+    transition: 0.5s;
 }

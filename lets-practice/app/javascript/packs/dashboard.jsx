@@ -37,11 +37,13 @@ class Dashboard extends Component {
               <a href={"songs/" + response.id}>
                 <div className="card-product index-card"key={index}>
 
-                <Image cloudName="dpxibu6l4" publicId={response.photo.url} width="300" crop="scale" />
+                <Image onMouseOver={this.revealComments} cloudName="dpxibu6l4" publicId={response.photo.url} width="300" crop="scale" />
 
-                  <div className="card-product-infos">
+                  <div className="card-product-infos song-info-hover">
                     <h2>{response.artist}</h2>
                     <h3>{response.name}</h3>
+                    <h3 className="song-info" ><em>{response.info.substring(0,50)}...</em></h3>
+
                     <h3 id="bpm-key-card"> {response.native_bpm} BPM  / {response.key}</h3>
                   </div>
                 </div>

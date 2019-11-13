@@ -6,14 +6,43 @@
     <h6 class="comment-button-animation">Notes</h6>
   </div>
   <div class="container">
-  <h5 id="hidden" class ="show-info-white hidden">Comment</h5>
-  <p id="hidden" class ="show-info-key hidden">Blah blah blah blah</p>
-  <p id="hidden" class ="show-info-key hidden">70 BPM</p>
-  <p id="hidden" class ="show-info-key hidden">4/5 Rating</p>
-  <br>
-  <h5 id="hidden" class ="show-info-white hidden">Comment</h5>
-  <p id="hidden" class ="show-info-key hidden">Blah blah blah blah</p>
-  <p id="hidden" class ="show-info-key hidden">70 BPM</p>
-  <p id="hidden" class ="show-info-key hidden">4/5 Rating</p>
+    <div class="container form-note">
+    <%= simple_form_for([ @song, @note ], html: { class: "hidden", id:"hidden"}) do |form| %>
+    <h5 id="hidden" class ="show-info-white hidden">Add New Practice Note</h5>
+    <%= form.input :date, as: :date %>
+    <%= form.input :prac_bpm, :label => "BPM", as: :numeric %>
+    <%= form.input :bar_progress, :label => "Upto Bar", as: :numeric %>
+    <%= form.input :rating, :label => "Rating", as: :numeric %>
+    <%= form.input :description, :label => "How did your practice go?", as: :text %>
+    <%= form.submit "Add Note", :class => "btn-dark" %>
+    <% end %>
+    </div>
+    <h1 id="hidden" class="show-info-main hidden">__________</h1>
+
+    <!-- <h5 id="hidden" class ="show-info-white hidden">Notes</h5> -->
+
+    <div id="reviews">
+    <% if @song.notes.blank? %>
+      <p id="hidden" class ="show-info hidden">You have no saved notes for your practice of <%= @song.name %>. <u>Why not add one and we can get started tracking your progress. </u></p>
+    <% else %>
+    <h5 id="hidden" class ="show-info hidden">Practice Log</h5>
+      <% @song.notes.reverse.each do |note| %>
+      <p id="hidden" class ="show-info-white hidden"><%= note.date %></p>
+      <p id="hidden" class ="show-info hidden"><strong>Practiced at </strong><%= note.prac_bpm %> <strong>BPM</strong></p>
+      <p id="hidden" class ="show-info-key hidden"><%= note.rating %> <strong>Stars</strong></p>
+      <p id="hidden" class ="show-info-key hidden"><strong>Up to Bar</strong> <%= note.bar_progress %></p>
+      <p id="hidden" class ="show-info-key hidden"><strong>How did it go?</strong>
+      <br> <%= note.description %></p>
+
+      <h1 id="hidden" class="show-info-main hidden">__________</h1>
+      <% end %>
+    <% end %>
+    </div>
+
+
+
+<!--   <p id="hidden" class ="show-info-key hidden">Note info goes here</p> -->
+ <!--  <p id="hidden" class ="show-info-key hidden">Bpm info</p> -->
+  <!-- <p id="hidden" class ="show-info-key hidden">Rating info</p> -->
   </div>
 </div>
