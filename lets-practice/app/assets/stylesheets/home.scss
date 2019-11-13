@@ -20,6 +20,14 @@
   background-size: cover;
 
 }
+
+.main-page-second {
+  border: 3px solid white;
+  background-image: url("https://res.cloudinary.com/dpxibu6l4/image/upload/e_brightness:-36/v1573315212/marius-masalar-rPOmLGwai2w-unsplash_okvphx.jpg");
+  background-position: center;
+  background-size: cover;
+
+}
 .col p {
   // transform: skewX(8deg);
 }
@@ -35,16 +43,25 @@
 
 }
 .each {
+  color: white !important;
   border-top: solid;
   height: 150px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
+  transition: 1s;
 }
 
+.each:hover {
+  color: white !important;
+}
+
+
 .each #hover-image {
+  color: white !important;
   height: 100px;
   visibility:hidden;
+  transition: 0.8s;
 
 
 }
@@ -52,12 +69,12 @@
   border-top: solid;
   height: 300px;
   opacity: 1;
-  transition: 1s;
+  text-decoration: none;
 }
 
 .each:hover #hover-image{
     visibility:visible;
-    transition: 1s;
+
 }
 
 #played-on {
@@ -67,10 +84,22 @@
 }
 .each:hover #played-on{
     visibility:visible;
-    transition: 1s;
 }
 
 .home-text {
   color: white;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
 }
 

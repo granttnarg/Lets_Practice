@@ -4,6 +4,7 @@
   padding-left: 30px;
   height: 900px;
   width: 10%;
+  z-index: 21;
 }
 
 .row {
@@ -53,4 +54,55 @@ h6 {
 
 .show-col-center {
   margin-right: 10px;
+}
+
+.show-info-main {
+  background-color: $off-white;
+  color: black;
+  padding-left: 20px;
+}
+
+
+.show-info {
+  background-color: black;
+  color: white;
+  margin-left: 20px;
+  padding: 5px 5px;
+}
+
+.show-info-search-head {
+  background-color: black;
+  color: white;
+  // margin-left: 20px;
+  padding: 5px 5px;
+  opacity: 0.8;
+  font-size: 20px;
+  width: 60%;
+  vertical-align:middle;
+  margin: auto;
+}
+
+
+.show-info-comments {
+  // background-color: #2F2FEF;
+  font-size: 30px;
+  color: white;
+  margin-left: 20px;
+  padding: 5px 5px;
+}
+
+
+
+.show-info-white {
+  background-color: white;
+  color: black;
+  margin-left: 20px;
+  padding: 5px 5px;
+}
+
+.show-info-key {
+  background-color: #24313D;
+  color: white;
+  padding: 5px 5px;
+
 }

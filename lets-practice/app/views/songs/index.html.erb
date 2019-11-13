@@ -1,8 +1,33 @@
 <div class="row show-page">
 </div>
-<ul>
-  <% @songs.each do |song| %>
-  <li><%= song.artist%> //  <%= link_to song.name, song_path(song) %> // <%= song.date_uploaded%> </li>
-  <% end %>
 
-</ul>
+<div id="search-results" class="container">
+
+  <% @songs.each do |song| %>
+    <%= link_to song_path(song) do %>
+      <div class="card-product index-card">
+        <%= cl_image_tag song.photo, height: 200, crop: :fill, id: "hover-image" %>
+
+        <div class="card-product-infos">
+          <h2><%= song.artist%></h2>
+          <h3><%= song.name%></h3>
+          <h3 id="bpm-key-card"><%= song.native_bpm%> BPM  /  <%= song.key %> </h3>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+
+<div class="container">
+
+    <div class="index-card row">
+      <div class="">
+
+      </div>
+      <div class="">
+      </div>
+    </div>
+
+  </div>
