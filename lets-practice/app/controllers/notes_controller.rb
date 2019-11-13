@@ -4,9 +4,15 @@ class NotesController < ApplicationController
     @note = Note.new(note_params)
     @note.song = @song
     if @note.save
-      redirect_to song_path(@song)
+      respond_to do |format|
+        format.html { redirect_to song_path(@song) }
+        format.js
+      end
     else
-      render 'songs/show'
+      respond_to do |format|
+        format.html { render 'songs/show' }
+        format.js
+      end
     end
   end
 
@@ -16,3 +22,4 @@ class NotesController < ApplicationController
     params.require(:note).permit(:description, :bar_progress, :rating, :date, :prac_bpm)
   end
 end
+
