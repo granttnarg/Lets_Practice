@@ -10,7 +10,7 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  opacity: 1;
+  opacity: .9;
 }
 
 .sidenav a {
@@ -67,3 +67,27 @@
   cursor: pointer;
 
 }
+
+.form-note {
+  color: black;
+  text-align: right;
+}
+
+.simple_form div.input {
+  margin-bottom: 10px;
+  margin-right: 20px;
+  clear: both;
+ /* Required for Webkit, but not for Gecko */
+}
+
+.date {
+  margin-right: 20px;
+}
+
+.numeric {
+  margin-right: 20px;
+}
+.text {
+  margin-right: 20px;
+}
+
