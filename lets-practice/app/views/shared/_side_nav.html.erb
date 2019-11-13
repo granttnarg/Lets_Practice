@@ -7,7 +7,7 @@
   </div>
   <div class="container">
     <div class="container form-note">
-    <%= simple_form_for([ @song, @note ], html: { class: "hidden", id:"hidden"}) do |form| %>
+    <%= simple_form_for([ @song, @note ], remote: true, html: { class: "hidden", id:"hidden"}) do |form| %>
     <h5 id="hidden" class ="show-info-white hidden">Add New Practice Note</h5>
     <%= form.input :date, as: :date %>
     <%= form.input :prac_bpm, :label => "BPM", as: :numeric %>
@@ -26,6 +26,7 @@
       <p id="hidden" class ="show-info hidden">You have no saved notes for your practice of <%= @song.name %>. <u>Why not add one and we can get started tracking your progress. </u></p>
     <% else %>
     <h5 id="hidden" class ="show-info hidden">Practice Log</h5>
+    <div id="notes-side">
       <% @song.notes.reverse.each do |note| %>
       <p id="hidden" class ="show-info-white hidden"><%= note.date %></p>
       <p id="hidden" class ="show-info hidden"><strong>Practiced at </strong><%= note.prac_bpm %> <strong>BPM</strong></p>
@@ -36,6 +37,7 @@
 
       <h1 id="hidden" class="show-info-main hidden">__________</h1>
       <% end %>
+      </div>
     <% end %>
     </div>
 

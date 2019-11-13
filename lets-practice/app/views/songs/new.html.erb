@@ -1,25 +1,24 @@
 <div class="container">
   <%= simple_form_for @song do |f| %>
     <div class="row new-form" style="padding-top: 50px;">
-      <div class="col-xs-12 col-lg-12">
+      <div class="col-xs-6 col-lg-6">
+        <div class="container form-new-song">
+          <h5 class ="show-info">Add A New Song</h5>
+          <br>
 
-      <%= f.input :artist, label: "Artist Name"%>
-      <%= f.input :name, label: "Song Name"  %>
-      <%= f.input :native_bpm, label: "Native BPM" %>
-      <%= f.input :key, label: "Key" %>
-      <%= f.input :chords, label: "Chords" %>
+            <%= f.input :artist, label: "Artist Name"%>
+            <%= f.input :name, label: "Song Name"  %>
+            <%= f.input :native_bpm, label: "Native BPM" %>
+            <%= f.input :key, label: "Key" %>
+            <%= f.input :chords, label: "Chords" %>
+            <%= f.input :info, label: "Description" %>
+            <%= f.input :photo, label: "Album Art" %>
+            <%= f.input :sheet_music, label: "Sheet Music" %>
+            <%= f.input :photo_cache, as: :hidden %>
 
-      <%= f.input :info, label: "Description" %>
-      </div>
-
-      <div class="col-xs-12 col-lg-8">
-
-      <%= f.input :photo, label: "Album Art" %>
-      <%= f.input :sheet_music, label: "Sheet Music" %>
-      <%= f.input :photo_cache, as: :hidden %>
-
-      <%= f.submit %>
-      </div>
+            <%= f.submit "Add Song", :class => "btn-dark" %>
+        </div>
+    </div>
 
     </div>
   <% end %>
