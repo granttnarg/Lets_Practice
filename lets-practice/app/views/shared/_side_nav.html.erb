@@ -6,14 +6,35 @@
     <h6 class="comment-button-animation">Notes</h6>
   </div>
   <div class="container">
-  <h5 id="hidden" class ="show-info-white hidden">Comment</h5>
-  <p id="hidden" class ="show-info-key hidden">Blah blah blah blah</p>
-  <p id="hidden" class ="show-info-key hidden">70 BPM</p>
-  <p id="hidden" class ="show-info-key hidden">4/5 Rating</p>
-  <br>
-  <h5 id="hidden" class ="show-info-white hidden">Comment</h5>
-  <p id="hidden" class ="show-info-key hidden">Blah blah blah blah</p>
-  <p id="hidden" class ="show-info-key hidden">70 BPM</p>
-  <p id="hidden" class ="show-info-key hidden">4/5 Rating</p>
+    <%= simple_form_for([ @song, @note ], html: { class: "hidden", id:"hidden"}) do |form| %>
+    <h5 id="hidden" class ="show-info-white hidden">Add New Note</h5>
+    <%= form.input :bar_progress, as: :numeric %>
+    <%= form.input :rating, as: :numeric %>
+    <%= form.input :description, as: :text %>
+    <%= form.submit "Add Note", :class => "btn-primary" %>
+    <% end %>
+    <h1 id="hidden" class="show-info-main hidden">__________</h1>
+
+    <!-- <h5 id="hidden" class ="show-info-white hidden">Notes</h5> -->
+
+    <div id="reviews">
+    <% if @song.notes.blank? %>
+      <p id="hidden" class ="show-info hidden">You have no saved notes for practice of <%= @song.name %></p>
+    <% else %>
+      <% @song.notes.reverse.each do |note| %>
+      <p id="hidden" class ="show-info-key hidden">Rating - <%= note.rating %></p>
+      <p id="hidden" class ="show-info-key hidden">Up to bar - <%= note.bar_progress %></p>
+      <p id="hidden" class ="show-info-key hidden">Info - <%= note.description %></p>
+
+      <h1 id="hidden" class="show-info-main hidden">__________</h1>
+      <% end %>
+    <% end %>
+    </div>
+
+
+
+<!--   <p id="hidden" class ="show-info-key hidden">Note info goes here</p> -->
+ <!--  <p id="hidden" class ="show-info-key hidden">Bpm info</p> -->
+  <!-- <p id="hidden" class ="show-info-key hidden">Rating info</p> -->
   </div>
 </div>
