@@ -1,15 +1,16 @@
 
 <br>
-<div class="container">
+<br>
+<!-- <div class="container"> -->
 
         <div id="main_carousel" class="carousel slide" data-ride="carousel">
 
           <div class="carousel-inner">
 
             <div class="carousel-item active">
-              <div class="main-box container">
+              <div class="main-box">
               <div class="row main-page">
-              <% @songs[0..3].each do |song|  %>
+              <% @songs[0..2].each do |song|  %>
                 <div class="col column">
                 <%= link_to song_path(song) do %>
 
@@ -36,10 +37,10 @@
           </div>
 
             <div class="carousel-item">
-            <div class="main-box container">
+            <div class="main-box">
 
              <div class="row main-page-second">
-              <% @songs[4..7].each do |song|  %>
+              <% @songs[3..6].each do |song|  %>
                 <div class="col column">
 
                  <%= link_to song_path(song) do %>
@@ -74,6 +75,16 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+
+
+<!-- </div> -->
+</div>
+<br>
+<br>
+<div class="main-picture">
+  <br>
+
+  <h1 class="footer-text">Helping you keep track of your musical progress!</h1>
 
 </div>
 

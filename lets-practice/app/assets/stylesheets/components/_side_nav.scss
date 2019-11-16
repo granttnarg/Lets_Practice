@@ -47,6 +47,9 @@
 .hidden {
   visibility:hidden;
 }
+.not-hidden {
+  visibility: visible !important;
+}
 
 .comment-button-animation {
   background-color: #6A5250;
@@ -89,5 +92,9 @@
 }
 .text {
   margin-right: 20px;
+}
+
+.no-opacity {
+  opacity: 0;
 }
 
