@@ -44,7 +44,7 @@ class Dashboard extends Component {
                     <h3>{response.name}</h3>
                     <h3 className="song-info" ><em>{response.info.substring(0,50)}...</em></h3>
 
-                    <h3 id="bpm-key-card"> {response.native_bpm} BPM  / {response.key}</h3>
+                    <h3 id="bpm-key-card"> <b>{response.key}</b> at <b>{response.native_bpm} BPM</b> in <b>{response.time_signature}</b> </h3>
                   </div>
                 </div>
               </a>
