@@ -4,13 +4,17 @@
     <div class="col-1"></div>
     <div class="col-2 show-col-left">
       <%= cl_image_tag @song.photo, height: 120, crop: :fill %>
+
       <br>
       <br>
       <br>
       <br>
       <h4 class="show-info-main"><%= @song.artist %></h4>
+
       <h5 class="show-info"><%= @song.name %></h5>
+
       <h5 class="show-info-white"><%= @song.native_bpm %> BPM</h5>
+      <h5 class="show-info-time">in <%= @song.time_signature %></h5>
       <h6 class="show-info-key"><%= @song.key%></h6>
       <h3>______</h3>
       <p><%= @song.info %></p>
