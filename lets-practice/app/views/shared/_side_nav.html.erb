@@ -23,6 +23,8 @@
 
     <div id="reviews">
     <% if @song.notes.blank? %>
+      <div id="notes-side">
+      </div>
       <p id="hidden" class ="show-info hidden">You have no saved notes for your practice of <%= @song.name %>. <u>Why not add one and we can get started tracking your progress. </u></p>
     <% else %>
     <h5 id="hidden" class ="show-info hidden">Practice Log</h5>

@@ -4,6 +4,7 @@ var newNote = '<p id="hidden" class ="show-info-white"><%= @note.date %></p><p i
 
 var allNotes = document.getElementById('notes-side');
 
+console.log(allNotes);
 allNotes.insertAdjacentHTML('afterbegin', newNote);
 
 var inputBox = document.getElementById('note_rating')
