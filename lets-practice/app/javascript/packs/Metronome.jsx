@@ -70,9 +70,9 @@ class Metronome extends Component {
     let { playing, bpm} = this.state;
 
     return (
-      <div className="metronome">
+      <div id="metro-nome" className="metronome hidden">
         <div className="bpm-slider">
-          <div id="bpm-num">{bpm} BPM</div>
+          <div id="bpm-num" className="not-hidden">{bpm} bpm</div>
           <input id="bpm-slider"
             type="range"
             min="60"

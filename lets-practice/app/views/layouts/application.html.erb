@@ -37,15 +37,32 @@
 
     <script>
       function openNav() {
-      if (document.getElementById("mySidenav").style.width === "500px"){
+      if (document.getElementById("mySidenav").style.width === "380px"){
         revealComments();
           return document.getElementById("mySidenav").style.width = "150px";
         } else {
         revealComments();
-          return document.getElementById("mySidenav").style.width = "500px"
+          return document.getElementById("mySidenav").style.width = "380px"
         }
       };
     </script>
+
+      <script>
+         var svgMetro = document.getElementById('metro-svg');
+         console.log(svgMetro);
+
+
+        svgMetro.addEventListener("click",() => {
+          console.log("hello")
+          const metro = document.getElementById("metro-nome");
+            if (metro.classList.contains("hidden")) {
+          return metro.classList.remove("hidden");
+        } else {
+          return metro.classList.add("hidden");
+        }
+      });
+
+      </script>
 
    <%= javascript_pack_tag 'application' %>
   </body>
